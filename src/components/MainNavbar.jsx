@@ -27,13 +27,16 @@ function MainNavbar() {
               </DropdownTrigger>
               <DropdownMenu>
                 <DropdownItem>
-                  <Link href="">Home</Link>
+                  <Link href="/">Home</Link>
                 </DropdownItem>
                 <DropdownItem>
                   <Link href="">New Collections</Link>
                 </DropdownItem>
                 <DropdownItem>
                   <Link href="">Popular Collections</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link href="/collections">Our Collections</Link>
                 </DropdownItem>
                 <DropdownItem>
                   <Link href="">Contact Us</Link>
@@ -65,11 +68,7 @@ function MainNavbar() {
                   <i className="bi bi-bell text-md font-medium text-black"></i>
                 </Button>
               </DropdownTrigger>
-              <DropdownMenu>
-                <DropdownItem>
-                  <Link href="">Home</Link>
-                </DropdownItem>
-              </DropdownMenu>
+              <DropdownMenu></DropdownMenu>
             </Dropdown>
           </NavbarItem>
         </NavbarContent>
