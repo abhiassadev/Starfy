@@ -42,17 +42,6 @@ function PopularSwiper() {
               </Chip>
             </div>
           </div>
-          <div className="swiper-slide">
-            <div className="relative text-center">
-              <img src="/fashion 32.png" />
-              <Chip className="absolute bottom-24 left-5 bg-black text-sm font-medium text-white p-5">
-                $32
-              </Chip>
-              <Chip className="bg-black text-base font-semibold text-white min-w-52 p-5">
-                Fashion 32
-              </Chip>
-            </div>
-          </div>
         </div>
       </div>
     </>

@@ -29,6 +29,18 @@ function MainNavbar() {
                 <DropdownItem>
                   <Link href="">Home</Link>
                 </DropdownItem>
+                <DropdownItem>
+                  <Link href="">New Collections</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link href="">Popular Collections</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link href="">Contact Us</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link href="">Terms</Link>
+                </DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </NavbarItem>
