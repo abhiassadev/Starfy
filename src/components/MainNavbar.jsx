@@ -57,7 +57,7 @@ function MainNavbar() {
         </NavbarContent>
         <NavbarBrand className="flex justify-center items-center">
           <a href="" className="text-lg font-bold text-black">
-            Starfy
+            Dreamour
           </a>
         </NavbarBrand>
         <NavbarContent justify="end">

@@ -53,32 +53,30 @@ function CollectionsPage() {
           <div className="grid grid-cols-2 gap-3 mt-10">
             {(searchQuery ? findedData : data)?.map((data) => {
               return (
-                <>
-                  <Link href={`/details/${data.id}`}>
-                    <Card key={data.id} className="w-[43vw] h-56">
-                      <CardHeader className="absolute flex-col items-end">
-                        <div className="bg-black py-1 px-3 text-center rounded-full">
-                          <p className="text-tiny font-normal text-white">
-                            {data.price}
-                          </p>
-                        </div>
-                      </CardHeader>
-                      <CardBody className="flex">
-                        <img src={data.image} className="w-full" />
-                      </CardBody>
-                      <CardFooter className="absolute bottom-0 bg-transparent backdrop-blur-xl justify-between">
-                        <div>
-                          <h1 className="text-lg font-medium text-black">
-                            {data.name}
-                          </h1>
-                          <p className="text-xs font-normal text-black opacity-80">
-                            Click for details
-                          </p>
-                        </div>
-                      </CardFooter>
-                    </Card>
-                  </Link>
-                </>
+                <Link href={`/details/${data.id}`} key={data.id}>
+                  <Card className="w-[43vw] h-56">
+                    <CardHeader className="absolute flex-col items-end">
+                      <div className="bg-black py-1 px-3 text-center rounded-full">
+                        <p className="text-tiny font-normal text-white">
+                          {data.price}
+                        </p>
+                      </div>
+                    </CardHeader>
+                    <CardBody className="flex">
+                      <img src={data.image} className="w-full" />
+                    </CardBody>
+                    <CardFooter className="absolute bottom-0 bg-transparent backdrop-blur-xl justify-between">
+                      <div>
+                        <h1 className="text-lg font-medium text-black">
+                          {data.name}
+                        </h1>
+                        <p className="text-xs font-normal text-black opacity-80">
+                          Click for details
+                        </p>
+                      </div>
+                    </CardFooter>
+                  </Card>
+                </Link>
               );
             })}
           </div>
