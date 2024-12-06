@@ -4,7 +4,7 @@ import PopularSwiper from "../components/PopularSwiper";
 import Newsletter from "../components/Newsletter";
 import FooterContent from "../components/FooterContent";
 
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 
 function Home() {
   return (
@@ -18,13 +18,18 @@ function Home() {
             Explore your favorite product, 1000 products available!
           </p>
           <img src="/fashion 48.png" className="w-full" />
-          <Button size="lg" className="bg-black text-md font-medium text-white">
-            Explore Now!
-          </Button>
+          <Link href="/collections">
+            <Button
+              size="lg"
+              className="bg-black text-md font-medium text-white"
+            >
+              Explore Now!
+            </Button>
+          </Link>
         </div>
       </header>
       <main className="px-5">
-        <section>
+        <section id="newCollections">
           <div className="text-wrapper text-center mt-5">
             <h1 className="text-2xl font-semibold text-black">
               Our new collection
@@ -39,7 +44,7 @@ function Home() {
             </Button>
           </div>
         </section>
-        <section>
+        <section id="popularCollections">
           <div className="mt-16 mb-5">
             <h1 className="text-2xl font-semibold text-black">
               Our popular collections
@@ -54,7 +59,7 @@ function Home() {
           <Newsletter />
         </section>
       </main>
-      <footer className="bg-black px-5 mt-20 py-10">
+      <footer id="footer" className="bg-black px-5 mt-20 py-10">
         <FooterContent />
       </footer>
     </>

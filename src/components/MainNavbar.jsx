@@ -30,19 +30,19 @@ function MainNavbar() {
                   <Link href="/">Home</Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link href="">New Collections</Link>
+                  <Link href="#newCollections">New Collections</Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link href="">Popular Collections</Link>
+                  <Link href="#popularCollections">Popular Collections</Link>
                 </DropdownItem>
                 <DropdownItem>
                   <Link href="/collections">Our Collections</Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link href="">Contact Us</Link>
+                  <Link href="#footer">Contact Us</Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link href="">Terms</Link>
+                  <Link href="#footer">Terms</Link>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
@@ -56,7 +56,7 @@ function MainNavbar() {
           </NavbarItem>
         </NavbarContent>
         <NavbarBrand className="flex justify-center items-center">
-          <a href="" className="text-lg font-bold text-black">
+          <a href="#" className="text-lg font-bold text-black">
             Dreamour
           </a>
         </NavbarBrand>
@@ -64,8 +64,8 @@ function MainNavbar() {
           <NavbarItem>
             <Dropdown>
               <DropdownTrigger>
-                <Button isIconOnly>
-                  <i className="bi bi-bell text-md font-medium text-black"></i>
+                <Button isIconOnly className="bg-black">
+                  <i className="bi bi-bell text-md font-medium text-white"></i>
                 </Button>
               </DropdownTrigger>
               <DropdownMenu></DropdownMenu>

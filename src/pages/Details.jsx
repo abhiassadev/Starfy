@@ -73,9 +73,14 @@ function Details() {
             </p>
           </div>
           <div className="flex justify-center items-center w-full mt-5 mb-10">
-            <Button className="bg-black w-full text-base font-medium text-white">
-              Buy
-            </Button>
+            <Link
+              href={`https://wa.me/6283133793060?text=${product.name}`}
+              className="w-full"
+            >
+              <Button className="bg-black w-full text-base font-medium text-white">
+                Buy
+              </Button>
+            </Link>
           </div>
         </section>
       </main>

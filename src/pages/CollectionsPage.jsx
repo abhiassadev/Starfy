@@ -63,7 +63,7 @@ function CollectionsPage() {
                       </div>
                     </CardHeader>
                     <CardBody className="flex">
-                      <img src={data.image} className="w-full" />
+                      <img src={data.image} loading="lazy" className="w-full" />
                     </CardBody>
                     <CardFooter className="absolute bottom-0 bg-transparent backdrop-blur-xl justify-between">
                       <div>
