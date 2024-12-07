@@ -4,6 +4,7 @@ import {
   CardBody,
   CardFooter,
   Button,
+  Link,
 } from "@nextui-org/react";
 
 function NewCollection() {
@@ -12,7 +13,7 @@ function NewCollection() {
       <Card>
         <CardHeader className="absolute flex-col items-end">
           <div className="bg-black py-2 px-5 text-center rounded-full">
-            <p className="text-sm font-medium text-white">$50</p>
+            <p className="text-sm font-medium text-white">$24</p>
           </div>
         </CardHeader>
         <CardBody>
@@ -20,18 +21,20 @@ function NewCollection() {
         </CardBody>
         <CardFooter className="absolute bottom-0 bg-transparent backdrop-blur-xl justify-between">
           <div>
-            <h1 className="text-xl font-semibold text-black">Fashion</h1>
+            <h1 className="text-xl font-semibold text-black">Fashion 24</h1>
             <p className="text-md font-normal text-black opacity-80">
               New collection!
             </p>
           </div>
-          <Button className="bg-black font-medium text-white">Buy</Button>
+          <Link href="/collections">
+            <Button className="bg-black font-medium text-white">Buy</Button>
+          </Link>
         </CardFooter>
       </Card>
       <Card>
         <CardHeader className="absolute flex-col items-end">
           <div className="bg-black py-2 px-5 text-center rounded-full">
-            <p className="text-sm font-medium text-white">$50</p>
+            <p className="text-sm font-medium text-white">$25</p>
           </div>
         </CardHeader>
         <CardBody>
@@ -39,12 +42,14 @@ function NewCollection() {
         </CardBody>
         <CardFooter className="absolute bottom-0 bg-transparent backdrop-blur-xl justify-between">
           <div>
-            <h1 className="text-xl font-semibold text-black">Fashion</h1>
+            <h1 className="text-xl font-semibold text-black">Fashion 25</h1>
             <p className="text-md font-normal text-black opacity-80">
               New collection!
             </p>
           </div>
-          <Button className="bg-black font-medium text-white">Buy</Button>
+          <Link href="/collections">
+            <Button className="bg-black font-medium text-white">Buy</Button>
+          </Link>
         </CardFooter>
       </Card>
     </>

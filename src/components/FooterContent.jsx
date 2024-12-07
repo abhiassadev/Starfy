@@ -4,21 +4,25 @@ function FooterContent() {
   return (
     <>
       <div>
-        <h1 className="text-2xl font-semibold text-white">Starfy</h1>
+        <h1 className="text-2xl font-semibold text-white">Dreamour</h1>
         <p className="text-sm font-normal text-white opacity-80">
-          Place for searching cloths.
+          A place to look for womens clothing.
         </p>
       </div>
       <div className="grid grid-cols-2 gap-y-10 mt-10">
         <div className="flex flex-col">
           <h1 className="text-md font-medium text-white">Category</h1>
-          <Link href="" className="text-sm text-white opacity-80 mt-2">
+          <Link
+            href="/collections"
+            className="text-sm text-white opacity-80 mt-2"
+          >
             Women
           </Link>
-          <Link href="" className="text-sm text-white opacity-80 mt-3">
-            Men
-          </Link>
-          <Link href="" className="text-sm text-white opacity-80 mt-3">
+
+          <Link
+            href="#newCollections"
+            className="text-sm text-white opacity-80 mt-3"
+          >
             New
           </Link>
         </div>
@@ -30,16 +34,19 @@ function FooterContent() {
           <Link href="" className="text-sm text-white opacity-80 mt-3">
             Cancel Order
           </Link>
-          <Link href="" className="text-sm text-white opacity-80 mt-3">
-            New
-          </Link>
         </div>
         <div className="flex flex-col">
           <h1 className="text-md font-medium text-white">Contact Us</h1>
-          <Link href="" className="text-sm text-white opacity-80 mt-2">
+          <Link
+            href="https://wa.me/6283133793060"
+            className="text-sm text-white opacity-80 mt-2"
+          >
             WhatsApp
           </Link>
-          <Link href="" className="text-sm text-white opacity-80 mt-3">
+          <Link
+            href="mailto:abhiassastudio@gmail.com"
+            className="text-sm text-white opacity-80 mt-3"
+          >
             abhiassastudio@gmail.com
           </Link>
         </div>
@@ -49,10 +56,16 @@ function FooterContent() {
           <Link href="" className="text-sm text-white opacity-80 mt-2">
             <i className="bi bi-facebook text-lg"></i>
           </Link>
-          <Link href="" className="text-sm text-white opacity-80 mt-2">
+          <Link
+            href="https://www.instagram.com/abhiassastudio"
+            className="text-sm text-white opacity-80 mt-2"
+          >
             <i className="bi bi-instagram text-lg"></i>
           </Link>
-          <Link href="" className="text-sm text-white opacity-80 mt-2">
+          <Link
+            href="https://www.tiktok.com/@abhiassastudio"
+            className="text-sm text-white opacity-80 mt-2"
+          >
             <i className="bi bi-tiktok text-lg"></i>
           </Link>
         </div>

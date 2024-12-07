@@ -39,9 +39,11 @@ function Home() {
             <NewCollection />
           </div>
           <div className="mt-5">
-            <Button className="bg-black font-medium text-white">
-              View more
-            </Button>
+            <Link href="/collections">
+              <Button className="bg-black font-medium text-white">
+                View more
+              </Button>
+            </Link>
           </div>
         </section>
         <section id="popularCollections">

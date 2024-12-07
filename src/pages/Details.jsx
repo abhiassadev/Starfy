@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-// import MainNavbar from "../components/MainNavbar";
-
 import {
   Breadcrumbs,
   BreadcrumbItem,
-  Chip,
   Button,
-  Link,
+  Input,
   CircularProgress,
+} from "@nextui-org/react";
+
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  useDisclosure,
 } from "@nextui-org/react";
 
 import MainNavbar from "../components/MainNavbar";
@@ -17,9 +22,14 @@ import FooterContent from "../components/FooterContent";
 
 function Details() {
   const { id } = useParams();
-
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [quantity, setQuantity] = useState("");
+
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   useEffect(() => {
     fetch("/data/products.json")
@@ -28,8 +38,28 @@ function Details() {
         setData(data);
         setLoading(false);
       })
-      .catch((e) => setLoading(false));
-  }, []);
+      .catch(() => setLoading(false));
+  }, [id]);
+
+  const product = data.find((data) => data.id === parseInt(id));
+
+  const checkout = (e) => {
+    e.preventDefault();
+
+    const message = `
+    DATA PESANAN BARU
+    
+    Nama Produk: ${product.name}
+    Data Pemesan
+    Nama: ${name}
+    Nomor Handphone: ${phone}
+    Kuantitas: ${quantity}
+    `;
+
+    window.location.href = `https://wa.me/6283133793060?text=${encodeURIComponent(
+      message
+    )}`;
+  };
 
   if (loading) {
     return (
@@ -38,8 +68,6 @@ function Details() {
       </div>
     );
   }
-
-  const product = data.find((data) => data.id === parseInt(id));
 
   return (
     <>
@@ -63,24 +91,85 @@ function Details() {
           <div className="mt-5">
             <h1 className="text-xl font-medium text-black">{product.name}</h1>
             <p className="text-sm font-normal text-black opacity-80 mt-3">
-              Description : {product.description}
+              Description: {product.description}
             </p>
             <p className="text-sm font-normal text-black opacity-80 mt-2">
-              Stock : {product.stock}
+              Stock: {product.stock}
             </p>
             <p className="text-sm font-normal text-black mt-2">
-              Price : {product.price}
+              Price: {product.price}
             </p>
           </div>
           <div className="flex justify-center items-center w-full mt-5 mb-10">
-            <Link
-              href={`https://wa.me/6283133793060?text=${product.name}`}
-              className="w-full"
+            <Button
+              onPress={onOpen}
+              className="bg-black w-full text-base font-medium text-white"
             >
-              <Button className="bg-black w-full text-base font-medium text-white">
-                Buy
-              </Button>
-            </Link>
+              Buy
+            </Button>
+
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex-col">
+                      <h1 className="text-lg font-medium text-black">
+                        {product.name}
+                      </h1>
+                      <p className="text-sm font-normal text-black">
+                        Price : {product.price}
+                      </p>
+                    </ModalHeader>
+                    <ModalBody>
+                      <form onSubmit={checkout}>
+                        {/* <Input
+                          type="hidden"
+                          name="product_name"
+                          value={product.name}
+                          onChange={(e) => setProductName(e.target.value)}
+                        /> */}
+                        <Input
+                          label="Your Name"
+                          placeholder="Input your name"
+                          type="text"
+                          name="name"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                        />
+                        <Input
+                          label="Phone Number"
+                          placeholder="62 831 xxxx xxxx"
+                          type="number"
+                          name="phone"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
+                          classNames={{
+                            inputWrapper: ["mt-5"],
+                          }}
+                        />
+                        <Input
+                          label="Quantity"
+                          placeholder="Input quantity"
+                          type="number"
+                          name="quantity"
+                          value={quantity}
+                          onChange={(e) => setQuantity(e.target.value)}
+                          classNames={{
+                            inputWrapper: ["mt-5"],
+                          }}
+                        />
+                        <Button
+                          type="submit"
+                          className="bg-black w-full text-base font-medium text-white mt-5 mb-5"
+                        >
+                          Checkout
+                        </Button>
+                      </form>
+                    </ModalBody>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
           </div>
         </section>
       </main>
