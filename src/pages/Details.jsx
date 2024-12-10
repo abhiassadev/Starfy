@@ -43,22 +43,47 @@ function Details() {
 
   const product = data.find((data) => data.id === parseInt(id));
 
-  const checkout = (e) => {
+  const checkout = async (e) => {
     e.preventDefault();
 
-    const message = `
-    DATA PESANAN BARU
-    
-    Nama Produk: ${product.name}
-    Data Pemesan
-    Nama: ${name}
-    Nomor Handphone: ${phone}
-    Kuantitas: ${quantity}
-    `;
+    const order_id = product.id + Date.now();
+    const product_id = product.id;
+    const product_name = product.name;
+    const price = product.price;
+    const product_quantity = quantity;
+    const data = {
+      order_id,
+      product_id,
+      product_name,
+      price,
+      product_quantity,
+    };
 
-    window.location.href = `https://wa.me/6283133793060?text=${encodeURIComponent(
-      message
-    )}`;
+    const response = await fetch("https://dreamour-api.vercel.app/checkout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    console.log(result);
+
+    window.snap.pay(result);
+    // const message = `
+    // DATA PESANAN BARU
+
+    // Nama Produk: ${product.name}
+    // Data Pemesan
+    // Nama: ${name}
+    // Nomor Handphone: ${phone}
+    // Kuantitas: ${quantity}
+    // `;
+
+    // window.location.href = `https://wa.me/6283133793060?text=${encodeURIComponent(
+    //   message
+    // )}`;
   };
 
   if (loading) {

@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Fashion 21",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$21",
+    "price": 210000,
     "stock": 100,
     "category": "Women's",
     "image": "/fashion 21.png"
@@ -12,7 +12,7 @@
     "id": 2,
     "name": "Fashion 22",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$22",
+    "price": 220000,
     "stock": 200,
     "category": "Women's",
     "image": "/fashion 22.png"
@@ -21,7 +21,7 @@
     "id": 3,
     "name": "Fashion 23",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$23",
+    "price": 230000,
     "stock": 200,
     "category": "Women's",
     "image": "/fashion 23.png"
@@ -30,7 +30,7 @@
     "id": 4,
     "name": "Fashion 24",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$24",
+    "price": 240000,
     "stock": 200,
     "category": "Women's",
     "image": "/fashion 24.png"
@@ -39,7 +39,7 @@
     "id": 5,
     "name": "Fashion 25",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$25",
+    "price": 250000,
     "stock": 200,
     "category": "Women's",
     "image": "/fashion 25.png"
@@ -48,7 +48,7 @@
     "id": 6,
     "name": "Fashion 26",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$26",
+    "price": 260000,
     "stock": 200,
     "category": "Women's",
     "image": "/fashion 26.png"
@@ -57,7 +57,7 @@
     "id": 7,
     "name": "Fashion 27",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$27",
+    "price": 270000,
     "stock": 200,
     "category": "Women's",
     "image": "/fashion 27.png"
@@ -66,7 +66,7 @@
     "id": 8,
     "name": "Fashion 28",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$28",
+    "price": 280000,
     "stock": 200,
     "category": "Women's",
     "image": "/fashion 28.png"
@@ -75,7 +75,7 @@
     "id": 9,
     "name": "Fashion 29",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$29",
+    "price": 290000,
     "stock": 200,
     "category": "Women's",
     "image": "/fashion 29.png"
@@ -84,7 +84,7 @@
     "id": 10,
     "name": "Fashion 30",
     "description": "Very beautiful women's clothes of the best quality",
-    "price": "$30",
+    "price": 300000,
     "stock": 200,
     "category": "Women's",
     "image": "/fashion 30.png"
