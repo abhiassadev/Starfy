@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import MainNavbar from "../components/MainNavbar";
-import SearchBar from "../components/SearchBar";
 import FooterContent from "../components/FooterContent";
 
 import {
